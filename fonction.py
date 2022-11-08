@@ -41,3 +41,20 @@ def jeu():
         print('mauvaise lettre')
     print('bonne lettre')
     return 'bravo'
+
+tab = [0,1,2,0,4,5,6,0,8,9,10]
+
+def index(list,val):
+    x = 0
+    char = ''
+    for i in tab:
+        if val == list[x]:
+            if char != '':
+                char += ', ' + str(x) 
+            else:
+                char += str(x)
+        x += 1
+    return char
+        
+def conca(char1,char2):
+    return char1 + ', ' + char2
