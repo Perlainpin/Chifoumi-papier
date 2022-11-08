@@ -58,3 +58,14 @@ def index(list,val):
         
 def conca(char1,char2):
     return char1 + ', ' + char2
+
+def msg(x):
+    print(x)
+
+userlist = {"alex":"123","des-vans":"456","kotob":"789"}
+
+def login(user,password,list):
+    for key , value in list.items():
+        if key == user and value == password:
+            return "connexion bonne"
+        return "erreur connexion"
