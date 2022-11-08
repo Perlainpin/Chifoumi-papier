@@ -67,5 +67,7 @@ userlist = {"alex":"123","des-vans":"456","kotob":"789"}
 def login(user,password,list):
     for key , value in list.items():
         if key == user and value == password:
-            return "connexion bonne"
-        return "erreur connexion"
+            print( "connexion bonne" )
+            return
+        print( "erreur connexion" )
+        return
