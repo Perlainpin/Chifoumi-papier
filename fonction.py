@@ -10,7 +10,8 @@ def mult(x,y):
 def div(x,y):
     # je fais la division si le divisuer n'est pas egal a 0
     if y == 0:
-        return "error division par 0"
+        #renvoie erreur si il y a une divison par 0
+        return "erreur division par 0 changer la deuxieme valeur" 
     return x / y
 
 def mod(x,y):
@@ -33,3 +34,10 @@ def net(brut,fonction):
     else:
         x = brut * (1-23/100)  
     return x
+
+def jeu():
+    secret = 'z' 
+    while secret != input('choisi lettre'):
+        print('mauvaise lettre')
+    print('bonne lettre')
+    return 'bravo'
