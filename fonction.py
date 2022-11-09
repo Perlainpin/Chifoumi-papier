@@ -75,7 +75,6 @@ def login(user,password,list):
         return
 
 
-# definir un fonction qui recupere l'index du valeur x dans une liste tab
 def indexp(tab,x):
     # innitialisation de i qui est l'index , de chaineresulta qui sea la liste d'index et de firstturn qui verifie la beauté de chaineresulta
     i=0
@@ -87,11 +86,11 @@ def indexp(tab,x):
         if tab[i] == x:
             # alors on surveille si c'est le premier index mis dans chaineresulta pour concatené sans avoir " x"  
             if firstturn == True:
-                charesult += str[i]
+                charesult = str(i)
                 firstturn = False
             # sinon on concataine juste 
             else:
-                charesult = conca(charesult,str[i])
+                charesult = conca(charesult,str(i))
         # on ajoute 1 a i pour decaler l'index
         i +=1
     # enfin on retourne chaineresult
