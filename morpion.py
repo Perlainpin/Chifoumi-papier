@@ -64,22 +64,29 @@ def morpion():
         elif (tabmorpion[1][3], tabmorpion[2][2], tabmorpion[3][1]) == (0,0,0) or (tabmorpion[1][1], tabmorpion[2][2], tabmorpion[3][3]) == (0,0,0):
             print("joueur2 a gagné")
             return
+        # egalité
+        elif (tabmorpion[1][1],tabmorpion[1][2],tabmorpion[1][3],tabmorpion[2][1],tabmorpion[2][2],tabmorpion[2][3],tabmorpion[3][1],tabmorpion[3][2],tabmorpion[3][3]) != (2,2,2,2,2,2,2,2):
+            print("égalite")
+            return
         else:
             i, j = int(input("choisir la ligne de la case souhaité : ")), int(input("choisir la colone de la case souhaité : "))
-            if joueur == True:
-                if tabmorpion[i][j] == 2:
-                    tabmorpion[i][j] = 1
-                    joueur = not joueur
-                else : 
-                    print("case déja utilisé ou incorrecte")
-                    print('rejouer')
-            else:
-                if tabmorpion[i][j] == 2:
-                    tabmorpion[i][j] = 0
-                    joueur = not joueur
-                else : 
-                    print("case déja utilisé ou incorrecte")
-                    print('rejouer')
+            if 1 <= i <= 3 and 1 <= j <= 3: 
+                if joueur == True:
+                    if tabmorpion[i][j] == 2:
+                        tabmorpion[i][j] = 1
+                        joueur = not joueur
+                    else : 
+                        print("case déja utilisé")
+                        print('rejouer')
+                else:
+                    if tabmorpion[i][j] == 2:
+                        tabmorpion[i][j] = 0
+                        joueur = not joueur
+                    else : 
+                        print("case déja utilisé")
+                        print('rejouer')
+            else :
+                print("la case souhaité est incorrecte")
             displaytab(tabmorpion)
         
 
