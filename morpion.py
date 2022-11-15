@@ -33,6 +33,14 @@ def displaytab(tab):
         print(i)
 
 def morpion():
+    print("""
+    ------------------- JEU DU MORPION -----------------------
+    - ceci est un jeu du morpion
+    - il ce joue a deux ou a plus par equipe
+    - il suffit de lancer la commande morpion
+    - amuser vous bien
+    ----------------------------------------------------------- 
+    """)
     displaytab(tabmorpion)
     joueur = True
     while True:
@@ -57,20 +65,20 @@ def morpion():
             print("joueur2 a gagné")
             return
         else:
-            i, j = int(input("choisir la case souhaité : ")), int(input("choisir la case souhaité : "))
+            i, j = int(input("choisir la ligne de la case souhaité : ")), int(input("choisir la colone de la case souhaité : "))
             if joueur == True:
                 if tabmorpion[i][j] == 2:
                     tabmorpion[i][j] = 1
                     joueur = not joueur
                 else : 
-                    print("case déja utilisé")
+                    print("case déja utilisé ou incorrecte")
                     print('rejouer')
             else:
                 if tabmorpion[i][j] == 2:
                     tabmorpion[i][j] = 0
                     joueur = not joueur
                 else : 
-                    print("case déja utilisé")
+                    print("case déja utilisé ou incorrecte")
                     print('rejouer')
             displaytab(tabmorpion)
         
