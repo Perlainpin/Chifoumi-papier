@@ -1,6 +1,7 @@
 # DEBUT
 
 import os
+from tkinter import *
 
 tabmorpion = [
     ['□',"1","2","3"],
@@ -31,6 +32,30 @@ def displaytab(tab):
                 tabresultat[x][y] = '✚'
     for i in tabresultat:
         print(i)
+
+def graphique():
+    root = Tk()
+    root.title('Morpion')
+    root.grid()
+    qb1 = Button(root, text=tabresultat[1][1],padx = 50,pady = 50)
+    qb2 = Button(root, text=tabresultat[1][2],padx = 50,pady = 50)
+    qb3 = Button(root, text=tabresultat[1][3],padx = 50,pady = 50)
+    qb4 = Button(root, text=tabresultat[2][1],padx = 50,pady = 50)
+    qb5 = Button(root, text=tabresultat[2][2],padx = 50,pady = 50)
+    qb6 = Button(root, text=tabresultat[2][3],padx = 50,pady = 50)
+    qb7 = Button(root, text=tabresultat[3][1],padx = 50,pady = 50)
+    qb8 = Button(root, text=tabresultat[3][2],padx = 50,pady = 50)
+    qb9 = Button(root, text=tabresultat[3][3],padx = 50,pady = 50)
+    qb1.grid(row=0, column=0)
+    qb2.grid(row=0, column=1)
+    qb3.grid(row=0, column=2)
+    qb4.grid(row=1, column=0)
+    qb5.grid(row=1, column=1)
+    qb6.grid(row=1, column=2)
+    qb7.grid(row=2, column=0)
+    qb8.grid(row=2, column=1)
+    qb9.grid(row=2, column=2)
+    root.mainloop()
 
 def morpion():
     print("""
@@ -90,4 +115,4 @@ def morpion():
             displaytab(tabmorpion)
         
 
-print('morpion()')    
+graphique()   
