@@ -67,6 +67,7 @@ def morpion():
     ----------------------------------------------------------- 
     """)
     displaytab(tabmorpion)
+    tour = 0
     joueur = True
     while True:
         # victoire joueur1
@@ -90,7 +91,7 @@ def morpion():
             print("joueur2 a gagné")
             return
         # egalité
-        elif (tabmorpion[1][1],tabmorpion[1][2],tabmorpion[1][3],tabmorpion[2][1],tabmorpion[2][2],tabmorpion[2][3],tabmorpion[3][1],tabmorpion[3][2],tabmorpion[3][3]) != (2,2,2,2,2,2,2,2):
+        elif tour == 9:
             print("égalite")
             return
         else:
@@ -112,7 +113,8 @@ def morpion():
                         print('rejouer')
             else :
                 print("la case souhaité est incorrecte")
+            tour += 1
             displaytab(tabmorpion)
         
 
-graphique()   
+morpion()   
